@@ -90,8 +90,8 @@ const Homepage = () => {
         <div className="flex gap-5 justify-center">
           <div className="flex flex-col">
           <div style={strangerThings}>
-          <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+          <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -115,8 +115,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -140,8 +140,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -165,8 +165,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -192,8 +192,8 @@ const Homepage = () => {
         <div className="flex gap-5 justify-center">
         <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -217,8 +217,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -242,8 +242,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -267,8 +267,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -294,8 +294,8 @@ const Homepage = () => {
         <div className="flex gap-5 justify-center">
         <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -319,8 +319,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -344,8 +344,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
@@ -369,8 +369,8 @@ const Homepage = () => {
           </div>
           <div className="flex flex-col">
           <div style={strangerThings}>
-            <div className="flex justify-around">
-            <p className="bg-slate-400 border rounded-full" style={Font}>TV SERIES</p>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
