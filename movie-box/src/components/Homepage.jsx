@@ -94,6 +94,23 @@ const Homepage = () => {
             <p className="bg-slate-300 rounded-full bg-transparent" style={Font}>TV SERIES</p>
             <BsSuitHeart/>
             </div>
+            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <div className="flex gap-4">
+            <div className="flex gap-5">
+              <img src={imdb} alt="imdbtmv" />
+              <p className="text-[#111827]" style={Font}>
+                86.0/100
+              </p>
+            </div>
+            <div className="flex gap-5">
+              <img src={pignet} alt="pigneeterre" />
+              <p className="text-[#111827]" style={Font}>
+                97%
+              </p>
+            </div>
+          </div>
+          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
         </div>
         </div>
