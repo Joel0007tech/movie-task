@@ -85,162 +85,19 @@ const Homepage = () => {
             </a>
           </div>
         </div>
+      </div>
+      <section className="bg-black w-full">
+        <div className="flex flex-col">
+        <div className="flex">
+          <div className="flex flex-col">
+          <div style={strangerThings} className="flex">
+            <p className="bg-slate-300 rounded-full bg-transparent" style={Font}>TV SERIES</p>
+            <BsSuitHeart/>
+            </div>
+          </div>
         </div>
-     <div className="flex overflow-x-hidden">
-     <div className="flex flex-col">
-          <div style={strangerThings} className=" p-4">
-            <div className="flex flex-col">
-              <div className="flex gap-14">
-                <p
-                  className="bg-slate-300 border rounded-full text-black px-3"
-                  style={Font}
-                >
-                  TV SERIES
-                </p>
-                <BsSuitHeart className="rounded-full text-white bg-slate-500 w-5 h-5" />
-              </div>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] font-bold text-xs">
-                USA, 2016 - Current
-              </p>
-              <p style={Font} className="text-[#111827] text-lg font-bold">
-                Stranger Things
-              </p>
-              <div className="flex gap-4">
-                <div className="flex gap-5">
-                  <img src={imdb} alt="imdbtmv" />
-                  <p className="text-[#111827]" style={Font}>
-                    86.0/100
-                  </p>
-                </div>
-                <div className="flex gap-5">
-                  <img src={pignet} alt="pigneeterre" />
-                  <p className="text-[#111827]" style={Font}>
-                    97%
-                  </p>
-                </div>
-              </div>
-              <p style={Font} className="text-[#9CA3AF] font-bold">
-                Action, Adventurrrre, Horror
-              </p>
-              </div> 
-              <div className="flex flex-col">
-          <div style={strangerThings} className=" p-4">
-            <div className="flex flex-col">
-              <div className="flex gap-14">
-                <p
-                  className="bg-slate-300 border rounded-full text-black px-3"
-                  style={Font}
-                >
-                  TV SERIES
-                </p>
-                <BsSuitHeart className="rounded-full text-white bg-slate-500 w-5 h-5" />
-              </div>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] font-bold text-xs">
-                USA, 2016 - Current
-              </p>
-              <p style={Font} className="text-[#111827] text-lg font-bold">
-                Stranger Things
-              </p>
-              <div className="flex gap-4">
-                <div className="flex gap-5">
-                  <img src={imdb} alt="imdbtmv" />
-                  <p className="text-[#111827]" style={Font}>
-                    86.0/100
-                  </p>
-                </div>
-                <div className="flex gap-5">
-                  <img src={pignet} alt="pigneeterre" />
-                  <p className="text-[#111827]" style={Font}>
-                    97%
-                  </p>
-                </div>
-              </div>
-              <p style={Font} className="text-[#9CA3AF] font-bold">
-                Action, Adventurrrre, Horror
-              </p>
-              </div> 
-              <div className="flex flex-col">
-          <div style={strangerThings} className=" p-4">
-            <div className="flex flex-col">
-              <div className="flex gap-14">
-                <p
-                  className="bg-slate-300 border rounded-full text-black px-3"
-                  style={Font}
-                >
-                  TV SERIES
-                </p>
-                <BsSuitHeart className="rounded-full text-white bg-slate-500 w-5 h-5" />
-              </div>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] font-bold text-xs">
-                USA, 2016 - Current
-              </p>
-              <p style={Font} className="text-[#111827] text-lg font-bold">
-                Stranger Things
-              </p>
-              <div className="flex gap-4">
-                <div className="flex gap-5">
-                  <img src={imdb} alt="imdbtmv" />
-                  <p className="text-[#111827]" style={Font}>
-                    86.0/100
-                  </p>
-                </div>
-                <div className="flex gap-5">
-                  <img src={pignet} alt="pigneeterre" />
-                  <p className="text-[#111827]" style={Font}>
-                    97%
-                  </p>
-                </div>
-              </div>
-              <p style={Font} className="text-[#9CA3AF] font-bold">
-                Action, Adventurrrre, Horror
-              </p>
-              </div> 
-              <div className="flex flex-col">
-          <div style={strangerThings} className=" p-4">
-            <div className="flex flex-col">
-              <div className="flex gap-14">
-                <p
-                  className="bg-slate-300 border rounded-full text-black px-3"
-                  style={Font}
-                >
-                  TV SERIES
-                </p>
-                <BsSuitHeart className="rounded-full text-white bg-slate-500 w-5 h-5" />
-              </div>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] font-bold text-xs">
-                USA, 2016 - Current
-              </p>
-              <p style={Font} className="text-[#111827] text-lg font-bold">
-                Stranger Things
-              </p>
-              <div className="flex gap-4">
-                <div className="flex gap-5">
-                  <img src={imdb} alt="imdbtmv" />
-                  <p className="text-[#111827]" style={Font}>
-                    86.0/100
-                  </p>
-                </div>
-                <div className="flex gap-5">
-                  <img src={pignet} alt="pigneeterre" />
-                  <p className="text-[#111827]" style={Font}>
-                    97%
-                  </p>
-                </div>
-              </div>
-              <p style={Font} className="text-[#9CA3AF] font-bold">
-                Action, Adventurrrre, Horror
-              </p>
-              </div> 
-              {/* end of first row */}
-     </div>
+        </div>
+      </section>
     </div>
   );
 };
