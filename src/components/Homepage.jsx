@@ -406,7 +406,7 @@ const Homepage = () => {
         </div>
       </section>
       <footer>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1s">
           <div className="flex justify-center gap-10">
             < BiLogoFacebookSquare className="text-3xl"/>
           <BiLogoInstagram className="text-3xl"/>
