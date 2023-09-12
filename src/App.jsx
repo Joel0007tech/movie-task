@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Homepage from './components/Homepage';
 import Movies from './components/Movies';
 import Reflect from './components/Reflect';
+import Series from './components/Series';
+import Upcoming from './components/Upcoming';
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
      <Route path="/" element={<Homepage/>}  />
      <Route path="/movies" element={<Movies/>}  />
      <Route path="/reflect" element={<Reflect/>}  />
+     <Route path="/series" element={<Series/>}  />
+     <Route path="/upcoming" element={<Upcoming/>}  />
      </Routes>
      </BrowserRouter>
     </div>
