@@ -3,11 +3,14 @@ import logo from "../assets/Logo.svg";
 import imdb from "../assets/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.svg";
 import pignet from "../assets/PngItem_1381056 1.svg";
 import headingBackground from "../assets/Poster.svg";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineRight, AiFillYoutube } from "react-icons/ai";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { LuPlayCircle } from "react-icons/lu";
-import { BsSuitHeart } from "react-icons/bs";
+import { BsSuitHeart, BsTwitter} from "react-icons/bs";
 import stranger from "../assets/Posterstranger.svg";
+import { BiLogoFacebookSquare } from "react-icons/bi";
+import {BiLogoInstagram} from "react-icons/bi"
+
 
 const Homepage = () => {
   const headingBckground = {
@@ -85,7 +88,14 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <section className="w-full">
+      <section className="w-full relative bottom-12">
+        <div className="flex justify-around">
+          <p style={Font} className="font-bold text-4xl">Featured Movie</p>
+          <div className="flex">
+          <p className="text-[#BE123C] text-md font-normal cursor-pointer">Sort more </p>
+          <AiOutlineRight className="text-[#BE123C] relative top-1"/>
+          </div>
+        </div>
         <div className="flex flex-col gap-5 ">
         <div className="flex gap-5 justify-center">
           <div className="flex flex-col">
@@ -395,6 +405,24 @@ const Homepage = () => {
         </div>
         </div>
       </section>
+      <footer>
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-center gap-10">
+            < BiLogoFacebookSquare className="text-3xl"/>
+          <BiLogoInstagram className="text-3xl"/>
+          <BsTwitter className="text-3xl"/>
+          <AiFillYoutube className="text-3xl"/>
+          </div>
+          <div className="flex justify-center gap-10">
+            <p style={Font} className="text-[#111827] text-md">Conditions of Use</p>
+            <p style={Font} className="text-[#111827] text-md">Privacy & Policy</p>
+            <p style={Font} className="text-[#111827] text-md">Press Room</p>
+          </div>
+          <div className="flex justify-center">
+            <p style={Font} className="text-[#6B7280] text-md">© 2021 MovieBox by Adriana Eka Prayudha  </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
