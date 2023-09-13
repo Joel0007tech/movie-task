@@ -98,15 +98,15 @@ const Homepage = () => {
         </div>
         <div className="flex flex-col gap-5 ">
         <div className="flex gap-5 justify-center">
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
           <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -123,15 +123,15 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -148,15 +148,15 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -173,117 +173,15 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-        </div>
-        <div className="flex gap-5 justify-center">
-        <div className="flex flex-col">
-          <div style={strangerThings}>
-            <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
-            <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
-            <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
-            <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -302,15 +200,15 @@ const Homepage = () => {
           </div>
         </div>
         <div className="flex gap-5 justify-center">
-        <div className="flex flex-col">
-          <div style={strangerThings}>
+        <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -327,15 +225,15 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -352,15 +250,15 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -377,15 +275,117 @@ const Homepage = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
             <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
+            <div className="flex gap-4">
+            <div className="flex gap-5">
+              <img src={imdb} alt="imdbtmv" />
+              <p className="text-[#111827]" style={Font}>
+                86.0/100
+              </p>
+            </div>
+            <div className="flex gap-5">
+              <img src={pignet} alt="pigneeterre" />
+              <p className="text-[#111827]" style={Font}>
+                97%
+              </p>
+            </div>
+          </div>
+          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
+          </div>
+        </div>
+        <div className="flex gap-5 justify-center">
+        <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
+            <BsSuitHeart className="text-white"/>
+            </div>
+            </div>
+            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
+            <div className="flex gap-4">
+            <div className="flex gap-5">
+              <img src={imdb} alt="imdbtmv" />
+              <p className="text-[#111827]" style={Font}>
+                86.0/100
+              </p>
+            </div>
+            <div className="flex gap-5">
+              <img src={pignet} alt="pigneeterre" />
+              <p className="text-[#111827]" style={Font}>
+                97%
+              </p>
+            </div>
+          </div>
+          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
+          </div>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
+            <BsSuitHeart className="text-white"/>
+            </div>
+            </div>
+            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
+            <div className="flex gap-4">
+            <div className="flex gap-5">
+              <img src={imdb} alt="imdbtmv" />
+              <p className="text-[#111827]" style={Font}>
+                86.0/100
+              </p>
+            </div>
+            <div className="flex gap-5">
+              <img src={pignet} alt="pigneeterre" />
+              <p className="text-[#111827]" style={Font}>
+                97%
+              </p>
+            </div>
+          </div>
+          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
+          </div>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
+            <BsSuitHeart className="text-white"/>
+            </div>
+            </div>
+            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
+            <div className="flex gap-4">
+            <div className="flex gap-5">
+              <img src={imdb} alt="imdbtmv" />
+              <p className="text-[#111827]" style={Font}>
+                86.0/100
+              </p>
+            </div>
+            <div className="flex gap-5">
+              <img src={pignet} alt="pigneeterre" />
+              <p className="text-[#111827]" style={Font}>
+                97%
+              </p>
+            </div>
+          </div>
+          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
+          </div>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
+            <div className="flex justify-between p-2">
+            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
+            <BsSuitHeart className="text-white"/>
+            </div>
+            </div>
+            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
