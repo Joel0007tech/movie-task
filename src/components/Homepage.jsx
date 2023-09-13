@@ -9,7 +9,8 @@ import { LuPlayCircle } from "react-icons/lu";
 import { BsSuitHeart, BsTwitter} from "react-icons/bs";
 import stranger from "../assets/Posterstranger.svg";
 import { BiLogoFacebookSquare } from "react-icons/bi";
-import {BiLogoInstagram} from "react-icons/bi"
+import {BiLogoInstagram} from "react-icons/bi";
+import Dunkirk from "../assets/Poster (1).svg"
 
 
 const Homepage = () => {
@@ -20,11 +21,17 @@ const Homepage = () => {
     backgroundRepeat: "no-repeat",
   };
   const strangerThings = {
-    backgroundImage: `url(${stranger})`,
+    backgroundImage: `url(${Dunkirk})`,
     backgroundSize: "contain",
     height: "300px",
     backgroundRepeat: "no-repeat",
   };
+  const secondPoster ={
+    backgroundImage: `url(${stranger})`,
+    backgroundSize: "contain",
+    height: "300px",
+    backgroundRepeat: "no-repeat",
+  }
   const Font = {
     fontFamily: " 'DM Sans', sans-serif",
   };
@@ -126,12 +133,11 @@ const Homepage = () => {
           <div className="flex flex-col" data-testid: movie-card>
           <div style={strangerThings} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Dunkirk</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
