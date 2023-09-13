@@ -12,7 +12,7 @@ import { BiLogoFacebookSquare } from "react-icons/bi";
 import {BiLogoInstagram} from "react-icons/bi";
 import Batman from "../assets/Posterbatman.svg";
 import Spider from "../assets/Posterposterspider.svg";
-import Dunkirk from "../assets/PosterposterDunkkirk.svg"
+import Dunkirk from "../assets/PosterPosterDunkkirk.svg"
 
 const Homepage = () => {
   const headingBckground = {
