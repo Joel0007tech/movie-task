@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/Logo.svg";
-import headingBackground from "../assets/Poster.svg";
 import imdb from "../assets/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.svg";
 import pignet from "../assets/PngItem_1381056 1.svg";
 import { GoHome } from "react-icons/go";
