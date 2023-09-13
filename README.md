@@ -1,8 +1,8 @@
-# React + Vite
+## A web application where people can search for movies by title and id
+The site link will take you directly to Movies page, where you can search for movies, of your choice through their titles and id.
+On the Movies page, we have links like Home, Movies (the current page, you are on), Series, and Upcoming series.
+If you click on the Home, it takes you to the Homepage, showing the page, where people can see movies of their choice.
+If you click on the Series, it takes you to the Series page, showing the available series, that you can watch.
+If you click on the Upcoming series, it takes you to the Upcoming series page, showing the series that are yet to be released, but will soon be available to watch.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
