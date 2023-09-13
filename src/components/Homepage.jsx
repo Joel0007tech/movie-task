@@ -12,7 +12,12 @@ import { BiLogoFacebookSquare } from "react-icons/bi";
 import {BiLogoInstagram} from "react-icons/bi";
 import Batman from "../assets/Posterbatman.svg";
 import Spider from "../assets/Posterposterspider.svg";
-import Dunkirk from "../assets/PosterPosterDunkkirk.svg"
+import Dunkirk from "../assets/PosterPosterDunkkirk.svg";
+import DontBreathe from "../assets/PosterDont-breathe.svg";
+import Dune from "../assets/Posterdunc.svg";
+import Notime from "../assets/Posterno-time.svg";
+import Shangchi from "../assets/Postershang-chi.svg"
+
 
 const Homepage = () => {
   const headingBckground = {
@@ -45,7 +50,33 @@ const Homepage = () => {
     height: "300px",
     backgroundRepeat: "no-repeat",
   }
+  const DuneImg = {
+    backgroundImage: `url(${Dune})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
 
+  const BreatheImg = {
+    backgroundImage: `url(${DontBreathe})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const Timeless = {
+    backgroundImage: `url(${Notime})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const Shang = {
+    backgroundImage: `url(${Shangchi})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
 
   const Font = {
     fontFamily: " 'DM Sans', sans-serif",
