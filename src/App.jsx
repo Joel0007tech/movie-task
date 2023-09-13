@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Homepage from './components/Homepage';
 import Movies from './components/Movies';
-import Reflect from './components/Reflect';
+// import Reflect from './components/Reflect';
 import Series from './components/Series';
 import Upcoming from './components/Upcoming';
 
@@ -13,7 +13,7 @@ const App = () => {
      <Routes>
      <Route path="/" element={<Movies/>}  />
      <Route path="/homepage" element={<Homepage/>}  />
-     <Route path="/reflect" element={<Reflect/>}  />
+     {/* <Route path="/reflect" element={<Reflect/>}  /> */}
      <Route path="/series" element={<Series/>}  />
      <Route path="/upcoming" element={<Upcoming/>}  />
      </Routes>
