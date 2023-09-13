@@ -15,19 +15,44 @@ import stranger from "../assets/Posterstranger.svg";
 import Batman from "../assets/Posterbatman.svg";
 import Spider from "../assets/Posterposterspider.svg";
 import Dunkirk from "../assets/PosterposterDunkkirk.svg";
+import DontBreathe from "../assets/PosterDont-breathe.svg";
+import Dune from "../assets/Posterdunc.svg";
+import Notime from "../assets/Posterno-time.svg";
+import Shangchi from "../assets/Postershang-chi.svg"
 
 const Movies = () => {
   const Font = {
     fontFamily: "Poppins, sans-serif",
   };
 
-  const headingBckground = {
-    backgroundImage: `url(${headingBackground})`,
-    height: "100vh",
+  const DuneImg = {
+    backgroundImage: `url(${Dune})`,
+    height: "300px",
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
-    width: "100vh",
   };
+
+  const BreatheImg = {
+    backgroundImage: `url(${DontBreathe})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const Timeless = {
+    backgroundImage: `url(${Notime})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
+
+  const Shang = {
+    backgroundImage: `url(${Shangchi})`,
+    height: "300px",
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
+
 
   const strangerThings = {
     backgroundImage: `url(${stranger})`,
@@ -57,7 +82,7 @@ const Movies = () => {
 
   return (
     <div>
-      <div className="bg-green-300 w-fit h-[1000px] m-auto p-4">
+      <div className=" bg-gray-300 w-fit h-[1000px] m-auto p-4">
         <div className="flex">
           <div className="flex flex-col border border-gray-400 rounded-r-3xl p-3">
             <img src={logo} alt="movie-box logo" />
@@ -131,30 +156,29 @@ const Movies = () => {
           </div>
           <div className="flex flex-col border rounded-t-md">
             <div
-              style={headingBckground}
+              style={thirdPoster}
             >
               <div className="flex justify-between mt-3">
                 <input
                   type="text"
                   name=""
                   id=""
-                  className="bg-transparent border border-white text-white w-[350px] rounded-md h-10 p-3 m-auto mt-24"
+                  className="bg-transparent border border-white text-black w-[500px] bg-white rounded-md h-10 p-3 m-auto mt-24 relative bottom-3"
                   placeholder="what do you want to watch?"
                   style={Font}
                 />
-                <AiOutlineSearch className="text-white relative top-28 right-64" />
+                <AiOutlineSearch className="text-black relative top-24 right-60" />
               </div>
               <div className="flex flex-col gap-5 pt-6 bg-black">
         <div className="flex gap-5 justify-center">
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={strangerThings} data-testid: movie-poster>
           <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -171,15 +195,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={secondPoster} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Batman Begins</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -196,15 +219,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={thirdPoster} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Spiderman </p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -221,15 +243,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={fourthPoster} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Dunkirk</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -249,14 +270,13 @@ const Movies = () => {
         </div>
         <div className="flex gap-5 justify-center">
         <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div style={DuneImg} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Dune</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -273,15 +293,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={BreatheImg} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Don't Breathe</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -298,15 +317,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={Timeless} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>No Time</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />
@@ -323,15 +341,14 @@ const Movies = () => {
           </div>
           <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
           </div>
-          <div className="flex flex-col">
-          <div style={strangerThings}>
+          <div className="flex flex-col" data-testid: movie-card>
+          <div style={Shang} data-testid: movie-poster>
             <div className="flex justify-between p-2">
-            <p className="bg-slate-400 border rounded-full text-sm p-1" style={Font}>TV SERIES</p>
             <BsSuitHeart className="text-white"/>
             </div>
             </div>
             <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font}>Stranger things</p>
+            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Shang-chi</p>
             <div className="flex gap-4">
             <div className="flex gap-5">
               <img src={imdb} alt="imdbtmv" />

@@ -4,7 +4,7 @@ import axios from 'axios';
 function Reflect() {
   const [movie, setMovie] = useState(null);
   const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
-  const movieId = '215103';
+  const movieId = '213026';
 
   useEffect(() => {
     async function fetchMovieDetails() {
@@ -23,9 +23,9 @@ function Reflect() {
     <div>
       {movie ? (
         <>
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
-          {/* Additional movie details */}
+          <h2 data-testid="movie-title">{movie.title}</h2>
+          <p data-testid="movie-overview">{movie.overview}</p>
+          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`} alt="anything" />
         </>
       ) : (
         <p>Loading movie details...</p>
