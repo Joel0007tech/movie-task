@@ -13,7 +13,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import stranger from "../assets/Posterstranger.svg";
 import Batman from "../assets/Posterbatman.svg";
 import Spider from "../assets/Posterposterspider.svg";
-import Dunkirk from "../assets/PosterposterDunkkirk.svg";
+import Dunkirk from "../assets/PosterPosterDunkkirk.svg";
 import DontBreathe from "../assets/PosterDont-breathe.svg";
 import Dune from "../assets/Posterdunc.svg";
 import Notime from "../assets/Posterno-time.svg";
