@@ -139,7 +139,7 @@ const Movies = () => {
                 <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10 cursor-pointer" onClick={Reflect}/>
               </div>
               <div className='grid grid-cols-4 justify-items-center gap-3 sm:grid sm:grid-cols-2 sm:bg-red-500'>
-          {movieData.map((item) =>
+          {movieData.slice(0,10).map((item) =>
              <div className="flex flex-col border-[3px] rounded-t-md rounded-b-md border-red-700 2xl:p-4 sm:p-2">
              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="2xl:h-[300px] sm:h-[200px] sm:w-[350px]" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">

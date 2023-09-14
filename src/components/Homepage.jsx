@@ -49,7 +49,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <div style={headingBckground} className='sm:w-[900px] sm:h-fit'>
+      <div style={headingBckground} className='sm:w-[900px] sm:h-[100px]'>
         <div className="flex p-5 justify-around">
           <img src={logo} alt="logo-hero" />
           <div className="flex justify-between mt-3">
@@ -118,7 +118,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className='grid grid-cols-4 sm:grid sm:grid-cols-3 justify-items-center gap-3'>
-          {movieData.map((item) =>
+          {movieData.slice(0,10).map((item) =>
             <div className="flex flex-col">
               <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} 
               className=" border-[2px] rounded-full" data-testid: movie-poster/>
