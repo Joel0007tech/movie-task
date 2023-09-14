@@ -13,7 +13,7 @@ function Series() {
   async function getTrendingMovieData(type) {
     try {
       const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
-      let resp = await axios.get(`https://api.themoviedb.org/3/trending/${type}/day?api_key=${apiKey}&media_type=movie`);
+      let resp = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&media_type=movie`);
       console.log(21, resp.data.results);
 
       setMovieData(resp.data.results);
