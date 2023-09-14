@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import logo from "../assets/Logo.svg";
-import imdb from "../assets/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.svg";
-import pignet from "../assets/PngItem_1381056 1.svg";
+
 import { GoHome } from "react-icons/go";
 import { BiCameraMovie } from "react-icons/bi";
 import { PiMonitorPlayDuotone } from "react-icons/pi";
 import { BsCalendar3 } from "react-icons/bs";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { BsSuitHeart } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
 import stranger from "../assets/Posterstranger.svg";
 import Batman from "../assets/Posterbatman.svg";
@@ -78,6 +77,28 @@ const Movies = () => {
     height: "300px",
     backgroundRepeat: "no-repeat",
   };
+
+  const [movieData, setMovieData] = useState([]);
+
+  useEffect(() => {
+    getTrendingMovieData("movie");
+  }, []);
+
+  async function getTrendingMovieData(type) {
+    try {
+      const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
+      let resp = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&media_type=movie`);
+      console.log(21, resp.data.results);
+
+      setMovieData(resp.data.results);
+     
+    } catch (e) {
+
+    } finally {
+
+    }
+
+  }
 
   return (
     <div>
@@ -168,203 +189,16 @@ const Movies = () => {
                 />
                 <AiOutlineSearch className="text-black relative top-24 right-60" />
               </div>
-              <div className="flex flex-col gap-5 pt-6 bg-black">
-        <div className="flex gap-5 justify-center">
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={strangerThings} data-testid: movie-poster>
-          <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
+              <div className='grid grid-cols-3 justify-items-center gap-3'>
+          {movieData.map((item) =>
+            <div className="movie_item">
+              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />
+              <div className="movie_name">
+                {item.original_title ? item.original_title : item.original_name}
+
+              </div>
             </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Stranger things</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={secondPoster} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Batman Begins</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={thirdPoster} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Spiderman </p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={fourthPoster} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Dunkirk</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-        </div>
-        <div className="flex gap-5 justify-center">
-        <div className="flex flex-col">
-          <div style={DuneImg} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Dune</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={BreatheImg} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Don't Breathe</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={Timeless} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>No Time</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-          <div className="flex flex-col" data-testid: movie-card>
-          <div style={Shang} data-testid: movie-poster>
-            <div className="flex justify-between p-2">
-            <BsSuitHeart className="text-white"/>
-            </div>
-            </div>
-            <p className="text-[#9CA3AF] font-normal text-xs" style={Font}>USA, 2016 - Current</p>
-            <p className="text-[#111827] font-bold text-lg" style={Font} data-testid: movie-title>Shang-chi</p>
-            <div className="flex gap-4">
-            <div className="flex gap-5">
-              <img src={imdb} alt="imdbtmv" />
-              <p className="text-[#111827]" style={Font}>
-                86.0/100
-              </p>
-            </div>
-            <div className="flex gap-5">
-              <img src={pignet} alt="pigneeterre" />
-              <p className="text-[#111827]" style={Font}>
-                97%
-              </p>
-            </div>
-          </div>
-          <p style={Font} className="text-[#9CA3AF] text-xs">Action, Adventure, Horror</p>
-          </div>
-        </div>
+          )}
         </div>
             </div>
           </div>
