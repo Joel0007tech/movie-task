@@ -3,20 +3,20 @@ import axios from 'axios';
 
 
 function Series() {
-  const [movieData, setMovieData] = useState([]);
+  const [seriesData, setSeriesData] = useState([]);
 
   useEffect(() => {
-    getTrendingMovieData("movie");
+    getSeries("movie");
   }, []);
 
 
-  async function getTrendingMovieData(type) {
+  async function getSeries(type) {
     try {
       const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
       let resp = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&media_type=movie`);
       console.log(21, resp.data.results);
 
-      setMovieData(resp.data.results);
+      setSeriesData(resp.data.results);
      
     } catch (e) {
 
@@ -40,7 +40,7 @@ function Series() {
       className='w-[700px] p-2 border rounded-full' style={Font}/>
         </div>
         <div className='grid grid-cols-4 justify-items-center gap-3'>
-          {movieData.map((item) =>
+          {seriesData.map((item) =>
            <div className="flex flex-col">
              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import logo from "../assets/Logo.svg";
-
 import { GoHome } from "react-icons/go";
 import { BiCameraMovie } from "react-icons/bi";
 import { PiMonitorPlayDuotone } from "react-icons/pi";
@@ -9,74 +8,22 @@ import { BsCalendar3 } from "react-icons/bs";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
-import stranger from "../assets/Posterstranger.svg";
-import Batman from "../assets/Posterbatman.svg";
 import Spider from "../assets/Posterposterspider.svg";
-import Dunkirk from "../assets/PosterPosterDunkkirk.svg";
-import DontBreathe from "../assets/PosterDont-breathe.svg";
-import Dune from "../assets/Posterdunc.svg";
-import Notime from "../assets/Posterno-time.svg";
-import Shangchi from "../assets/Postershang-chi.svg"
+
 
 const Movies = () => {
   const Font = {
     fontFamily: "Poppins, sans-serif",
   };
 
-  const DuneImg = {
-    backgroundImage: `url(${Dune})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
 
-  const BreatheImg = {
-    backgroundImage: `url(${DontBreathe})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const Timeless = {
-    backgroundImage: `url(${Notime})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const Shang = {
-    backgroundImage: `url(${Shangchi})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-
-  const strangerThings = {
-    backgroundImage: `url(${stranger})`,
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const secondPoster = {
-    backgroundImage: `url(${Batman})`,
-    backgroundSize: "cover",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  };
   const thirdPoster = {
     backgroundImage: `url(${Spider})`,
     backgroundSize: "cover",
     height: "300px",
     backgroundRepeat: "no-repeat",
   };
-  const fourthPoster = {
-    backgroundImage: `url(${Dunkirk})`,
-    backgroundSize: "cover",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  };
+ 
 
   const [movieData, setMovieData] = useState([]);
 
