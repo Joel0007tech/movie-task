@@ -25,36 +25,33 @@ function Series() {
     }
 
   }
-
+  const Font = {
+    fontFamily: "Poppins, sans-serif",
+  };
 
 
   return (
     <>
-      <div className="background_container">
-        <div className="button_container">
-          <button onClick={() => {
-            getTrendingMovieData("movie");
-          }
-          }>
-            Trending Movies
-          </button>
-          <button onClick={() => {
-            getTrendingMovieData("tv");
-          }
-          }>
-            Series
-          </button>
+      <div className="">
+      <div className=' p-7 bg-slate-500'>
+        <div className='flex p-7 gap-3 justify-center'>
+        <h3 className='text-3xl font-bold' style={Font}>Series</h3>
+        <input type="text" name="" id="" placeholder='search for series here'
+      className='w-[700px] p-2 border rounded-full' style={Font}/>
         </div>
-        <div className='grid grid-cols-3 justify-items-center gap-3'>
+        <div className='grid grid-cols-4 justify-items-center gap-3'>
           {movieData.map((item) =>
-            <div className="movie_item">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />
-              <div className="movie_name">
-                {item.original_title ? item.original_title : item.original_name}
-
+           <div className="flex flex-col">
+             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="" data-testid: movie-poster/>
+              <div className="flex flex-col gap-2">
+                <p className='text-white font-bold' style={Font} data-testid: movie-title >
+                  {item.original_title ? item.original_title : item.original_name}</p>
+                <p className='text-white'>{item.overview ? item.overview : item.overview}</p>
+                <p className='text-white' style={Font} data-testid: movie-release-date >{item.release_date ? item.release_date : item.release_date}</p>
               </div>
-            </div>
+            </div> 
           )}
+        </div>
         </div>
       </div>
     </>

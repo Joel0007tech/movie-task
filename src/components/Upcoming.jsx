@@ -42,10 +42,12 @@ function Upcoming() {
         <div className='grid grid-cols-4 justify-items-center gap-3'>
           {movieData.map((item) =>
             <div className="flex flex-col">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />
-              <div className="flex flex-col">
-                {item.original_title ? item.original_title : item.original_name}
-                {/* {item.overview ? item.overview : item.overview} */}
+              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} data-testid: movie-poster/>
+              <div className="flex flex-col gap-2">
+                <p className='text-white font-bold' style={Font} data-testid: movie-title >
+                  {item.original_title ? item.original_title : item.original_name}</p>
+                <p className='text-white'>{item.overview ? item.overview : item.overview}</p>
+                <p className='text-white' style={Font} data-testid: movie-release-date >{item.release_date ? item.release_date : item.release_date}</p>
               </div>
             </div>
           )}

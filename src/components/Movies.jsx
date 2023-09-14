@@ -102,7 +102,7 @@ const Movies = () => {
 
   return (
     <div>
-      <div className=" bg-gray-300 w-fit h-[1000px] m-auto p-4">
+      <div className=" w-fit  m-auto p-4 bg-gray-400 h-[2100px]">
         <div className="flex">
           <div className="flex flex-col border border-gray-400 rounded-r-3xl p-3">
             <img src={logo} alt="movie-box logo" />
@@ -174,7 +174,7 @@ const Movies = () => {
               </a>
             </div>
           </div>
-          <div className="flex flex-col border rounded-t-md">
+          <div className="flex flex-col">
             <div
               style={thirdPoster}
             >
@@ -183,21 +183,22 @@ const Movies = () => {
                   type="text"
                   name=""
                   id=""
-                  className="bg-transparent border border-white text-black w-[500px] bg-white rounded-md h-10 p-3 m-auto mt-24 relative bottom-3"
+                  className="bg-transparent border border-white text-black w-[650px]
+                   bg-white rounded-md h-10 p-3 m-auto mt-24 relative bottom-3"
                   placeholder="what do you want to watch?"
                   style={Font}
                 />
-                <AiOutlineSearch className="text-black relative top-24 right-60" />
+                <AiOutlineSearch className="text-black relative top-24 right-80" />
               </div>
-              <div className='grid grid-cols-3 justify-items-center gap-3'>
+              <div className='grid grid-cols-4 justify-items-center gap-3'>
           {movieData.map((item) =>
-            <div className="movie_item">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} />
-              <div className="movie_name">
-                {item.original_title ? item.original_title : item.original_name}
-
+             <div className="flex flex-col border-[3px] rounded-t-md rounded-b-md border-red-700 p-4">
+             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="h-[300px]" data-testid: movie-poster/>
+              <div className="flex flex-col gap-2">
+                <p className='text-black font-bold' style={Font} data-testid: movie-title >
+                  {item.original_title ? item.original_title : item.original_name}</p>
               </div>
-            </div>
+            </div> 
           )}
         </div>
             </div>
