@@ -33,13 +33,13 @@ function Upcoming() {
   return (
     <>
     <div>
-      <div className=' p-7 bg-slate-500'>
+      <div className=' p-7 bg-slate-500 sm:p-5'>
         <div className='flex p-7 gap-3 justify-center'>
         <h3 className='text-3xl font-bold' style={Font}>Upcoming Series</h3>
         <input type="text" name="" id="" placeholder='search for upcoming series here'
-      className='w-[700px] p-2 border rounded-full' style={Font}/>
+      className='2xl:w-[700px] p-2 border rounded-full' style={Font}/>
         </div>
-        <div className='grid grid-cols-4 justify-items-center gap-7'>
+        <div className='grid grid-cols-4 sm:grid sm:grid-cols-2 justify-items-center gap-7'>
           {movieData.map((item) =>
             <div className="flex flex-col">
               <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}

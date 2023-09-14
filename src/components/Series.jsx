@@ -39,15 +39,17 @@ function Series() {
         <input type="text" name="" id="" placeholder='search for series here'
       className='w-[700px] p-2 border rounded-full' style={Font}/>
         </div>
-        <div className='grid grid-cols-4 justify-items-center gap-7'>
+        <div className='grid grid-cols-4 sm:grid sm:grid-cols-2 justify-items-center gap-7'>
           {seriesData.map((item) =>
            <div className="flex flex-col">
-             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="border-[2px] rounded-full" data-testid: movie-poster/>
+             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
+              className="border-[2px] rounded-full" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">
                 <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
                   {item.original_title ? item.original_title : item.original_name}</p>
                 <p className='text-white text-justify text-sm'>{item.overview ? item.overview : item.overview}</p>
-                <p className='text-white text-center' style={Font} data-testid: movie-release-date >{item.release_date ? item.release_date : item.release_date}</p>
+                <p className='text-white text-center' style={Font} data-testid: movie-release-date >
+                  {item.release_date ? item.release_date : item.release_date}</p>
               </div>
             </div> 
           )}

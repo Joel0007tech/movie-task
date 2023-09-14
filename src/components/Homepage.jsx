@@ -120,7 +120,8 @@ const Homepage = () => {
         <div className='grid grid-cols-4 justify-items-center gap-3'>
           {movieData.map((item) =>
             <div className="flex flex-col">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className=" border-[2px] rounded-full" data-testid: movie-poster/>
+              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} 
+              className=" border-[2px] rounded-full" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">
                 <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
                   {item.original_title ? item.original_title : item.original_name}</p>
