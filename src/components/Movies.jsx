@@ -9,6 +9,7 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import Spider from "../assets/Posterposterspider.svg";
+import Reflect from './Reflect';
 
 
 const Movies = () => {
@@ -134,8 +135,8 @@ const Movies = () => {
                    bg-white rounded-md h-10 p-3 m-auto mt-24 relative bottom-3"
                   placeholder="what do you want to watch?"
                   style={Font}
-                />
-                <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10" />
+                 />
+                <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10 cursor-pointer" onClick={Reflect}/>
               </div>
               <div className='grid grid-cols-4 justify-items-center gap-3 sm:grid sm:grid-cols-2 sm:bg-red-500'>
           {movieData.map((item) =>

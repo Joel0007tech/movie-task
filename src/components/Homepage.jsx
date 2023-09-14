@@ -49,7 +49,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <div style={headingBckground}>
+      <div style={headingBckground} className='sm:w-[900px] sm:h-fit'>
         <div className="flex p-5 justify-around">
           <img src={logo} alt="logo-hero" />
           <div className="flex justify-between mt-3">
@@ -70,7 +70,7 @@ const Homepage = () => {
             <HiMenuAlt4 className=" bg-[#BE123C] text-white rounded-full w-[30px] h-[30px] cursor-pointer" />
           </div>
         </div>
-        <div className="flex flex-col px-36 gap-5 py-20">
+        <div className="flex flex-col 2xl:px-36 gap-5 2xl:py-20 sm:relative sm:bottom-12">
           <h3 className="text-white text-5xl font-bold" style={Font}>
             John Wick 3: <br />
             Parabellum
@@ -98,7 +98,7 @@ const Homepage = () => {
             <br />
             target of hit men and women everywhere.
           </p>
-          <div className="bg-[#BE123C] rounded-md flex w-fit p-2 gap-3 mt-9">
+          <div className="bg-[#BE123C] rounded-md flex w-fit p-2 gap-3 2xl:mt-9">
             <LuPlayCircle className="mt-[5px] text-white" />
             <a href="http://" className="text-white" style={Font}>
               WATCH TRAILER
@@ -107,7 +107,7 @@ const Homepage = () => {
         </div>
       </div>
       <section className="w-full">
-        <div className=' p-7 bg-slate-500 relative bottom-28'>
+        <div className=' p-7 bg-slate-500 relative bottom-28 sm:w-[900px]'>
         <div className='flex p-7 gap-3 justify-around'>
         <h3 className='text-3xl font-bold' style={Font}>Featured Movie</h3>
         <input type="text" name="" id="" placeholder='search for upcoming series here'
@@ -117,7 +117,7 @@ const Homepage = () => {
           <AiOutlineRight className="text-[#BE123C] relative top-1"/>
           </div>
         </div>
-        <div className='grid grid-cols-4 justify-items-center gap-3'>
+        <div className='grid grid-cols-4 sm:grid sm:grid-cols-3 justify-items-center gap-3'>
           {movieData.map((item) =>
             <div className="flex flex-col">
               <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} 
