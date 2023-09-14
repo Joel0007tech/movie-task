@@ -8,16 +8,9 @@ import { AiOutlineSearch, AiOutlineRight, AiFillYoutube } from "react-icons/ai";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { LuPlayCircle } from "react-icons/lu";
 import { BsTwitter} from "react-icons/bs";
-import stranger from "../assets/Posterstranger.svg";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import {BiLogoInstagram} from "react-icons/bi";
-import Batman from "../assets/Posterbatman.svg";
-import Spider from "../assets/Posterposterspider.svg";
-import Dunkirk from "../assets/PosterPosterDunkkirk.svg";
-import DontBreathe from "../assets/PosterDont-breathe.svg";
-import Dune from "../assets/Posterdunc.svg";
-import Notime from "../assets/Posterno-time.svg";
-import Shangchi from "../assets/Postershang-chi.svg"
+
 
 
 const Homepage = () => {
@@ -27,58 +20,7 @@ const Homepage = () => {
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   };
-  const strangerThings = {
-    backgroundImage: `url(${stranger})`,
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  };
-  const secondPoster ={
-    backgroundImage: `url(${Batman})`,
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  }
-  const thirdPoster ={
-    backgroundImage: `url(${Spider})`,
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  }
-  const fourthPoster ={
-    backgroundImage: `url(${Dunkirk})`,
-    backgroundSize: "contain",
-    height: "300px",
-    backgroundRepeat: "no-repeat",
-  }
-  const DuneImg = {
-    backgroundImage: `url(${Dune})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const BreatheImg = {
-    backgroundImage: `url(${DontBreathe})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const Timeless = {
-    backgroundImage: `url(${Notime})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const Shang = {
-    backgroundImage: `url(${Shangchi})`,
-    height: "300px",
-    backgroundSize: "contain",
-    backgroundRepeat: "no-repeat",
-  };
-
+  
   const Font = {
     fontFamily: " 'DM Sans', sans-serif",
   };
@@ -178,11 +120,11 @@ const Homepage = () => {
         <div className='grid grid-cols-4 justify-items-center gap-3'>
           {movieData.map((item) =>
             <div className="flex flex-col">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} data-testid: movie-poster/>
+              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className=" border-[2px] rounded-full" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">
-                <p className='text-white font-bold' style={Font} data-testid: movie-title >
+                <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
                   {item.original_title ? item.original_title : item.original_name}</p>
-                <p className='text-white' style={Font} data-testid: movie-release-date >
+                <p className='text-white text-center' style={Font} data-testid: movie-release-date >
                   {item.release_date ? item.release_date : item.release_date}</p>
               </div>
             </div>
