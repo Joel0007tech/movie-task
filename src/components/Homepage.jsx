@@ -133,7 +133,7 @@ const Homepage = () => {
         </div>
         </div>
       </section>
-      <footer className='relative bottom-10'>
+      <footer className='relative bottom-10 sm:hidden'>
         <div className="flex flex-col gap-1">
           <div className="flex justify-center gap-10">
             < BiLogoFacebookSquare className="text-3xl"/>
