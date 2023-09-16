@@ -43,12 +43,12 @@ function Series() {
           {seriesData.slice(0,10).map((item) =>
            <div className="flex flex-col">
              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
-              className="border-[2px] rounded-full" data-testid: movie-poster/>
+              className="border-[2px] rounded-full" data-testid="movie-poster"/>
               <div className="flex flex-col gap-2">
-                <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
+                <p className='text-white font-bold text-center' style={Font} data-testid ="movie-title" >
                   {item.original_title ? item.original_title : item.original_name}</p>
                 <p className='text-white text-justify text-sm'>{item.overview ? item.overview : item.overview}</p>
-                <p className='text-white text-center' style={Font} data-testid: movie-release-date >
+                <p className='text-white text-center' style={Font} data-testid ="movie-release-date" >
                   {item.release_date ? item.release_date : item.release_date}</p>
               </div>
             </div> 

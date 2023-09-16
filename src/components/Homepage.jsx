@@ -124,11 +124,11 @@ const Homepage = ({movie}) => {
          <Link to={`movie/${movie.id}`} key={movie.id}>
             <div className="flex flex-col">
               <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} 
-              className=" border-[2px] rounded-full" data-testid: movie-poster/>
+              className=" border-[2px] rounded-full" data-testid= "movie-poster"/>
               <div className="flex flex-col gap-2">
-                <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
+                <p className='text-white font-bold text-center' style={Font} data-testid="movie-title" >
                   {movie.original_title ? movie.original_title : movie.original_name}</p>
-                <p className='text-white text-center' style={Font} data-testid: movie-release-date >
+                <p className='text-white text-center' style={Font} data-testid="movie-release-date" >
                   {movie.release_date ? movie.release_date : movie.release_date}</p>
               </div>
             </div>

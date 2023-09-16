@@ -20,7 +20,7 @@ const MovieCard = () => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=46de18fffa9edb1da899c9420d18e1c6`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`Failed to fetch data (Status: ${response.status})`);
+          throw new Error(`Error fetching (Status: ${response.status})`);
         }
         return response.json();
       })
@@ -33,7 +33,7 @@ const MovieCard = () => {
   };
   if (error) {
     return (
-      <div className="error-message">
+      <div className="text-white">
         <p>{error}</p>
       </div>
     );
@@ -59,21 +59,21 @@ const MovieCard = () => {
                   {movieDetails.release_date}
                 </p>
               </div>
-              <div className="text-white text-center" data-testid="movie-runtime" style={Font}>{movieDetails.runtime} Minutes</div>
+              {/* <div className="text-white text-center" data-testid="movie-runtime" style={Font}>{movieDetails.runtime} Minutes</div> */}
             </div>
           </div>
 
-          <div className="overview-flex">
+          <div>
             <p className="text-white text-center" data-testid="movie-overview" style={Font}>{movieDetails.overview}</p>
             <div className="flex justify-center gap-6 mt-6">
               <p>
-                <button className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font}>
+                <a className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font} href="">
                   See Showtimes
-                </button>
+                </a>
               </p>
-              <button className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font}>
+              <a className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font} href="">
                 More watch Options
-              </button>
+              </a>
 
             </div>
 
