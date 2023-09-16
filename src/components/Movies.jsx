@@ -25,7 +25,7 @@ const Movies = () => {
  
   return (
     <div>
-      <div className=" w-fit  m-auto p-4 bg-gray-400 h-[1650px] sm:h-[1700px]">
+      <div className=" w-fit  m-auto p-4 bg-gray-400 h-[1200px] sm:h-[1050px]">
         <div className="flex">
           <div className="flex flex-col border border-gray-400 rounded-r-3xl p-3">
             <img src={logo} alt="movie-box logo" />
