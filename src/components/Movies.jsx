@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import logo from "../assets/Logo.svg";
+import MovieCard from "./MovieCard";
 import { GoHome } from "react-icons/go";
 import { BiCameraMovie } from "react-icons/bi";
 import { PiMonitorPlayDuotone } from "react-icons/pi";
@@ -9,14 +8,11 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import Spider from "../assets/Posterposterspider.svg";
-import Reflect from './Reflect';
-
 
 const Movies = () => {
   const Font = {
     fontFamily: "Poppins, sans-serif",
   };
-
 
   const thirdPoster = {
     backgroundImage: `url(${Spider})`,
@@ -24,33 +20,16 @@ const Movies = () => {
     height: "300px",
     backgroundRepeat: "no-repeat",
   };
- 
 
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
-    getTrendingMovieData("movie");
+    handleMovieClick("movie");
   }, []);
-
-  async function getTrendingMovieData(type) {
-    try {
-      const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
-      let resp = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}&media_type=movie`);
-      console.log(21, resp.data.results);
-
-      setMovieData(resp.data.results);
-     
-    } catch (e) {
-
-    } finally {
-
-    }
-
-  }
 
   return (
     <div>
-      <div className=" w-fit  m-auto p-4 bg-gray-400 h-[2100px] sm:h-[2900px]">
+      <div className=" w-fit  m-auto p-4 bg-gray-400 h-[1650px] sm:h-[1700px]">
         <div className="flex">
           <div className="flex flex-col border border-gray-400 rounded-r-3xl p-3">
             <img src={logo} alt="movie-box logo" />
@@ -123,9 +102,7 @@ const Movies = () => {
             </div>
           </div>
           <div className="flex flex-col sm:bg-red-500">
-            <div
-              style={thirdPoster}
-            >
+            <div style={thirdPoster}>
               <div className="flex justify-between mt-3 sm:pl-3">
                 <input
                   type="text"
@@ -135,20 +112,10 @@ const Movies = () => {
                    bg-white rounded-md h-10 p-3 m-auto mt-24 relative bottom-3"
                   placeholder="what do you want to watch?"
                   style={Font}
-                 />
-                <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10 cursor-pointer" onClick={Reflect}/>
+                />
+                <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10 cursor-pointer" />
               </div>
-              <div className='grid grid-cols-4 justify-items-center gap-3 sm:grid sm:grid-cols-2 sm:bg-red-500'>
-          {movieData.slice(0,10).map((item) =>
-             <div className="flex flex-col border-[3px] rounded-t-md rounded-b-md border-red-700 2xl:p-4 sm:p-2">
-             <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} className="2xl:h-[300px] sm:h-[200px] sm:w-[350px]" data-testid: movie-poster/>
-              <div className="flex flex-col gap-2">
-                <p className='text-black font-bold' style={Font} data-testid: movie-title >
-                  {item.original_title ? item.original_title : item.original_name}</p>
-              </div>
-            </div> 
-          )}
-        </div>
+              <MovieCard />
             </div>
           </div>
         </div>
@@ -158,3 +125,5 @@ const Movies = () => {
 };
 
 export default Movies;
+
+
