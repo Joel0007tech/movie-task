@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 const MovieCard = () => {
+  const Font = {
+    fontFamily: "Poppins, sans-serif",
+  };
+
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const [error, setError] = useState(null);
@@ -12,8 +17,7 @@ const MovieCard = () => {
   }, []);
 
   const getData = () => {
-    fetch(
-`https://api.themoviedb.org/3/movie/${id}?api_key=46de18fffa9edb1da899c9420d18e1c6`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=46de18fffa9edb1da899c9420d18e1c6`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Failed to fetch data (Status: ${response.status})`);
@@ -36,44 +40,42 @@ const MovieCard = () => {
   }
 
   return (
-    <div className="filmdetails-container">
+    <div>
       <div>
-        <div className="video-container">
+        <div className="flex justify-center">
           <img
             src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
-            className="details-img"
+            className="border-[4px] rounded-full border-white"
             alt=""
           />
         </div>
 
-        <div className="head-flex">
+        <div className="flex flex-col gap-5">
           <div>
-            <div className="runtime-flex">
-              <div className="title-flex">
-                <p data-testid="movie-title">{movieDetails.title}</p>
-                <p data-testid="movie-release-date">
+            <div className="flex flex-col">
+              <div className="flex flex-col gap-4">
+                <p data-testid="movie-title" className="text-white text-3xl font-bold text-center" style={Font}>{movieDetails.title}</p>
+                <p data-testid="movie-release-date" className="text-white text-center" style={Font}>
                   {movieDetails.release_date}
                 </p>
               </div>
-              <div className="runtime" data-testid="movie-runtime">{movieDetails.runtime} Minutes</div>
+              <div className="text-white text-center" data-testid="movie-runtime" style={Font}>{movieDetails.runtime} Minutes</div>
             </div>
           </div>
 
           <div className="overview-flex">
-            <p className="movie-about" data-testid="movie-overview">{movieDetails.overview}</p>
-            {/* <div>
+            <p className="text-white text-center" data-testid="movie-overview" style={Font}>{movieDetails.overview}</p>
+            <div className="flex justify-center gap-6 mt-6">
               <p>
-                <button className="button1">
-                  {" "}
-                  <img src={Ticket} alt="" /> See Showtimes
+                <button className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font}>
+                  See Showtimes
                 </button>
               </p>
-              <button className="button2">
-                {" "}
-                <img src={More} alt="" /> More watch Options{" "}
+              <button className="bg-red-700 p-2 text-white px-5 border rounded-md" style={Font}>
+                More watch Options
               </button>
 
-            </div> */}
+            </div>
 
           </div>
         </div>

@@ -109,7 +109,7 @@ const Movies = () => {
                   placeholder="what do you want to watch?"
                   style={Font}
                 />
-                <AiOutlineSearch className="text-black relative top-24 right-80 sm:right-10 cursor-pointer" />
+                <AiOutlineSearch className="text-black relative top-24 right-96 sm:right-10 cursor-pointer" />
               </div>
               <MovieCard />
             </div>
