@@ -10,6 +10,7 @@ import { LuPlayCircle } from "react-icons/lu";
 import { BsTwitter} from "react-icons/bs";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import {BiLogoInstagram} from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 
@@ -27,11 +28,11 @@ const Homepage = () => {
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
-    getUpcomingSeries("upcoming");
+    getFeaturedMovie("upcoming");
   }, []);
 
 
-  async function getUpcomingSeries(type) {
+  async function getFeaturedMovie(type) {
     try {
       const apiKey = '46de18fffa9edb1da899c9420d18e1c6';
       let resp = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&media_type=movie`);
@@ -118,20 +119,25 @@ const Homepage = () => {
           </div>
         </div>
         <div className='grid grid-cols-4 sm:grid sm:grid-cols-3 justify-items-center gap-3'>
-          {movieData.slice(0,10).map((item) =>
+          {movieData.slice(0,10).map((movie) => (
+          <li key={movie.id}>
+          <Link to={`movie/${movie.id} `} key={movie.id}>
             <div className="flex flex-col">
-              <img src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`} 
+              <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} 
               className=" border-[2px] rounded-full" data-testid: movie-poster/>
               <div className="flex flex-col gap-2">
                 <p className='text-white font-bold text-center' style={Font} data-testid: movie-title >
-                  {item.original_title ? item.original_title : item.original_name}</p>
+                  {movie.original_title ? movie.original_title : movie.original_name}</p>
                 <p className='text-white text-center' style={Font} data-testid: movie-release-date >
-                  {item.release_date ? item.release_date : item.release_date}</p>
+                  {movie.release_date ? movie.release_date : movie.release_date}</p>
               </div>
             </div>
-          )}
+            </Link>
+            </li>
+          ))}
         </div>
         </div>
+
       </section>
       <footer className='relative bottom-10 sm:hidden'>
         <div className="flex flex-col gap-1">
