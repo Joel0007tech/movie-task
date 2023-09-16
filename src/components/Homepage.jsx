@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Homepage = () => {
+const Homepage = ({movie}) => {
   const headingBckground = {
     backgroundImage: `url(${headingBackground})`,
     height: "100vh",
@@ -121,7 +121,7 @@ const Homepage = () => {
         <div className='grid grid-cols-4 sm:grid sm:grid-cols-3 justify-items-center gap-3'>
           {movieData.slice(0,10).map((movie) => (
           <li key={movie.id} className=' list-none'>
-          <Link to={`movie/${movie.id} `} key={movie.id}>
+         <Link to={`movie/${movie.id}`} key={movie.id}>
             <div className="flex flex-col">
               <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} 
               className=" border-[2px] rounded-full" data-testid: movie-poster/>

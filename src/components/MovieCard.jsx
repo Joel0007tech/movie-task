@@ -1,12 +1,11 @@
-import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const MovieCard = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
   const [error, setError] = useState(null);
 
-  //   Using params for dynamic routing
   useEffect(() => {
     getData();
     window.scroll(0, 0);
@@ -14,11 +13,9 @@ const MovieCard = () => {
 
   const getData = () => {
     fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=46de18fffa9edb1da899c9420d18e1c6`
-    )
+`https://api.themoviedb.org/3/movie/${id}?api_key=46de18fffa9edb1da899c9420d18e1c6`)
       .then((response) => {
         if (!response.ok) {
-          // Check if the response status is not OK (e.g., 404, 500)
           throw new Error(`Failed to fetch data (Status: ${response.status})`);
         }
         return response.json();
@@ -28,10 +25,8 @@ const MovieCard = () => {
       })
       .catch((error) => {
         setError(error.message);
-        // Set the error message in case of an error
       });
   };
-  // Check for errors and display an error message if one exists
   if (error) {
     return (
       <div className="error-message">
@@ -57,7 +52,7 @@ const MovieCard = () => {
               <div className="title-flex">
                 <p data-testid="movie-title">{movieDetails.title}</p>
                 <p data-testid="movie-release-date">
-                  {MovieCard.release_date}
+                  {movieDetails.release_date}
                 </p>
               </div>
               <div className="runtime" data-testid="movie-runtime">{movieDetails.runtime} Minutes</div>

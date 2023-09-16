@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../assets/Logo.svg";
 import MovieCard from "./MovieCard";
 import { GoHome } from "react-icons/go";
@@ -21,12 +22,7 @@ const Movies = () => {
     backgroundRepeat: "no-repeat",
   };
 
-  const [movieData, setMovieData] = useState([]);
-
-  useEffect(() => {
-    handleMovieClick("movie");
-  }, []);
-
+ 
   return (
     <div>
       <div className=" w-fit  m-auto p-4 bg-gray-400 h-[1650px] sm:h-[1700px]">
@@ -38,7 +34,7 @@ const Movies = () => {
                 <div className="flex gap-3 px-9">
                   <GoHome />
                   <li className="text-base font-normal relative bottom-1 text-justify">
-                    <Link to="/homepage" target="_blank" style={Font}>
+                    <Link to="/" target="_blank" style={Font}>
                       Home
                     </Link>
                   </li>
@@ -46,7 +42,7 @@ const Movies = () => {
                 <div className="flex gap-3 px-9">
                   <BiCameraMovie />
                   <li className="text-base font-normal relative bottom-1 text-justify">
-                    <Link to="/" target="_blank" style={Font}>
+                    <Link to="/movies" target="_blank" style={Font}>
                       Movies
                     </Link>
                   </li>
